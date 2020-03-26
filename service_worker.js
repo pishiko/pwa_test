@@ -8,6 +8,7 @@ self.addEventListener('install',function(event){
         caches
         .open(CACHE_NAME)
         .then(function(cache){
+            console.log("INSTALL")
             return cache.addAll(urlToCache)
         })
     );
