@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>PWA!</title>
+        <!-- vue.js　-->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <link rel="manifest" href="manifest.json">
+    </head>
+    <body>
+        <h1>MAIN TITLE</h1>
+        <div id="app">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">REVERSE</button>
+        </div>
+        <script>
+            //<!-- service worker -->
+            if ('serviceWorker' in navigator) {
+                navigator
+                .serviceWorker
+                .register('service_worker.js').then(function(registration){
+                    console.log('success! ',registration.scope)
+                })
+                .catch(function(err){
+                    console.log('failed! ',err);
+                });
+            }
+
+            //<!-- vue.js -->
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: 'HELLO WORLD...'
+                },
+                methods: {
+                    reverseMessage: function(){
+                        this.message = this.message.split('').reverse().join('')
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
