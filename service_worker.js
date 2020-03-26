@@ -1,6 +1,8 @@
 var CACHE_NAME = 'pwa-pishiko-sample-caches';
 var urlToCache = [
-    '/pishiko.github.io/pwa_test/'
+    //'/pishiko.github.io/pwa_test/'
+    '/',
+    '/index.html'
 ];
 
 self.addEventListener('install',function(event){
