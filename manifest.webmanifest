@@ -9,5 +9,13 @@
             "sizes":"192x192",
             "type":"image/jpg"
         }
-    ]
+    ],
+    "share_target":{
+        "action":"share.html",
+        "params":{
+            "title":"name",
+            "text":"description",
+            "url":"link"
+        }
+    }
 }
