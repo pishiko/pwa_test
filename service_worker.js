@@ -1,4 +1,4 @@
-var CACHE_NAME = 'pwa-sample-caches';
+var CACHE_NAME = 'pwa-pishiko-sample-caches';
 var urlToCache = [
     '/pishiko.github.io/pwa_test/'
 ];
