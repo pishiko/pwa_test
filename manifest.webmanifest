@@ -2,7 +2,7 @@
     "name":"PWA sample app",
     "short_name":"PWA",
     "display":"minimal-ui",
-    "start_url":"/pwa_test/index.html",
+    "start_url":"/pwa_test/",
     "icons":[
         {
             "src":"images/icon.jpg",
