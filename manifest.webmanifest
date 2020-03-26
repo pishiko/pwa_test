@@ -1,7 +1,7 @@
 {
     "short_name":"PWA",
     "name":"PWA sample app",
-    "display":"standalone",
+    "display":"minimal-ui",
     "start_url":"index.html",
     "icons":[
         {
@@ -11,9 +11,8 @@
         }
     ],
     "share_target":{
-        "action":"/share.html/",
+        "action":"share.html",
         "method":"GET",
-        "enctype":"application/x-www-form-urlencoded",
         "params":{
             "title":"name",
             "text":"description",
