@@ -29,7 +29,7 @@
         var url = parsedUrl.searchParams.get('link')
         
         if(title!==null){
-          var path = "https://twitter.com/intent/tweet?text=" + title + "%20#NowPlaying" + "&url=" + text
+          var path = encodeURI("https://twitter.com/intent/tweet?text=" + title + " #NowPlaying" + "&url=" + text)
           window.location.href = path
           return
         }
