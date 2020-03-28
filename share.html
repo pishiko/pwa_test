@@ -27,10 +27,12 @@
         var title = parsedUrl.searchParams.get('name')
         var text = parsedUrl.searchParams.get('description')
         var url = parsedUrl.searchParams.get('link')
-        console.log('Title shared: ' + title);
-        console.log('Text shared: ' + text);
-        console.log('URL shared: ' + url);
-
+        
+        if(name && text){
+          var path = "https://twitter.com/intent/tweet?text=" + name + "%20#NowPlaying" + "&url=" + url
+          window.location.href = path
+          return
+        }
         info.title = title?title:"null"
         info.text = text?text:"null"
         info.url = url?url:"null"
