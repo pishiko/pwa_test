@@ -28,8 +28,8 @@
         var text = parsedUrl.searchParams.get('description')
         var url = parsedUrl.searchParams.get('link')
         
-        if(name && text){
-          var path = "https://twitter.com/intent/tweet?text=" + name + "%20#NowPlaying" + "&url=" + url
+        if(title!==null){
+          var path = "https://twitter.com/intent/tweet?text=" + title + "%20#NowPlaying" + "&url=" + text
           window.location.href = path
           return
         }
