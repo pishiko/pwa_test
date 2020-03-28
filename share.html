@@ -1,16 +1,41 @@
 <html>
   <head>
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="manifest.json">
+    <!-- vue.js　-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
-    <h1>SHARE DEMO PAGE</h1>
+    <h1>SHARE PAGE</h1>
+    <div id="info">
+      <p>TITLE : {{ title }}</p>
+      <p>TEXT : {{ text }}</p>
+      <p>URL : {{ url }}</p>
+    </div>
     <script>
+      //<!-- vue.js -->
+        var info = new Vue({
+          el: '#info',
+          data: {
+            title:"none",
+            text:"none",
+            url:"none"
+          }
+        });
+      
       window.addEventListener('load', () => {
         var parsedUrl = new URL(window.location);
-        console.log('Title shared: ' + parsedUrl.searchParams.get('name'));
-        console.log('Text shared: ' + parsedUrl.searchParams.get('description'));
-        console.log('URL shared: ' + parsedUrl.searchParams.get('link'));
+        var title = parsedUrl.searchParams.get('name')
+        var text = parsedUrl.searchParams.get('description')
+        var url = parsedUrl.searchParams.get('link')
+        console.log('Title shared: ' + title);
+        console.log('Text shared: ' + text);
+        console.log('URL shared: ' + url);
+
+        info.title = title?title:"null"
+        info.text = text?text:"null"
+        info.url = url?url:"null"
       });
+      
     </script>
   </body>
 </html>

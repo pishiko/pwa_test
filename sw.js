@@ -1,7 +1,7 @@
-var CACHE_NAME = 'pwa-pishiko-sample-caches';
+var CACHE_NAME = 'pwa-pishiko-youmusic-caches';
 var urlToCache = [
-    //'/pishiko.github.io/pwa_test/'
-    '/pwa_test/index.html'
+    '/pwa_test/index.html',
+    '/pwa_test/share.html'
 ];
 
 self.addEventListener('install',function(event){
