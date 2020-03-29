@@ -28,11 +28,11 @@
         var text = parsedUrl.searchParams.get('description')
         var url = parsedUrl.searchParams.get('link')
         
-        if(title!==null){
-          var path = encodeURI("https://twitter.com/intent/tweet?text=" + title +"&url=" + text + "&hashtags=NowPlaying")
-          window.location.href = path
-          return
-        }
+        // if(title!==null){
+        //   var path = encodeURI("https://twitter.com/intent/tweet?text=" + title +"&url=" + text + "&hashtags=NowPlaying")
+        //   window.location.href = path
+        //   return
+        // }
         info.title = title?title:"null"
         info.text = text?text:"null"
         info.url = url?url:"null"
